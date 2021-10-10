@@ -23,19 +23,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
-        int numberOfCoffees = 2;
-        display(numberOfCoffees);
-        displayPrice(numberOfCoffees * 5);
+        displayPrice(quantity * 5);
     }
 
     public void increment(View view) {
         quantity = quantity + 1;
         display(quantity);
+        displayPrice(quantity * 5);
     }
 
     public void decrement(View view) {
         quantity = quantity - 1;
         display(quantity);
+        displayPrice(quantity * 5);
     }
 
     private void display(int number) {
@@ -46,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
     private void displayPrice(int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+    }
+
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
     }
 
 //    @Override
