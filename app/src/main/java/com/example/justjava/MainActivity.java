@@ -23,19 +23,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
-        displayPrice(quantity * 5);
+//        String message = "Total Item Count " + quantity + " coffees.";
+        String message = "Price $" + (5 * quantity) + "\n Thank You!";
+        displayMessage(message);
+//        String priceMessage = "Amount Due $" + 10;
+////        String priceMessage = "Amount Due " + "$10";
+//        displayMessage(priceMessage);
+////        displayPrice(quantity * 5);
     }
 
     public void increment(View view) {
         quantity = quantity + 1;
         display(quantity);
-        displayPrice(quantity * 5);
+//        displayPrice(quantity * 5);
     }
 
     public void decrement(View view) {
         quantity = quantity - 1;
         display(quantity);
-        displayPrice(quantity * 5);
+//        displayPrice(quantity * 5);
     }
 
     private void display(int number) {
